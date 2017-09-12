@@ -51,7 +51,7 @@ public:
     {
         if (Timetable->objectName().isEmpty())
             Timetable->setObjectName(QStringLiteral("Timetable"));
-        Timetable->resize(531, 325);
+        Timetable->resize(800, 480);
         centralWidget = new QWidget(Timetable);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout = new QVBoxLayout(centralWidget);
@@ -68,10 +68,15 @@ public:
         label_2->setGeometry(QRect(280, 0, 71, 16));
         lineEdit = new QLineEdit(groupBox);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(60, 0, 191, 20));
+        lineEdit->setGeometry(QRect(60, 0, 211, 20));
+        QFont font;
+        font.setBold(true);
+        font.setWeight(75);
+        lineEdit->setFont(font);
         lineEdit_2 = new QLineEdit(groupBox);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(330, 0, 81, 20));
+        lineEdit_2->setGeometry(QRect(330, 0, 201, 20));
+        lineEdit_2->setFont(font);
 
         verticalLayout->addWidget(groupBox);
 
@@ -82,9 +87,11 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(tableWidget->sizePolicy().hasHeightForWidth());
         tableWidget->setSizePolicy(sizePolicy);
-        QFont font;
-        font.setPointSize(7);
-        tableWidget->setFont(font);
+        QFont font1;
+        font1.setPointSize(15);
+        font1.setBold(true);
+        font1.setWeight(75);
+        tableWidget->setFont(font1);
         tableWidget->setStyleSheet(QStringLiteral(""));
         tableWidget->setTextElideMode(Qt::ElideMiddle);
 
@@ -92,7 +99,7 @@ public:
 
         tableWidget_2 = new QTableWidget(centralWidget);
         tableWidget_2->setObjectName(QStringLiteral("tableWidget_2"));
-        tableWidget_2->setFont(font);
+        tableWidget_2->setFont(font1);
 
         verticalLayout->addWidget(tableWidget_2);
 
@@ -110,7 +117,7 @@ public:
         Timetable->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Timetable);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 531, 27));
+        menuBar->setGeometry(QRect(0, 0, 800, 27));
         Timetable->setMenuBar(menuBar);
         mainToolBar = new QToolBar(Timetable);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
