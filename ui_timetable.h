@@ -80,7 +80,7 @@ public:
         lineEdit_2->setFont(font);
         label_3 = new QLabel(groupBox);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(580, 0, 68, 21));
+        label_3->setGeometry(QRect(580, 0, 201, 21));
         QFont font1;
         font1.setItalic(true);
         label_3->setFont(font1);
