@@ -89,8 +89,8 @@ public:
         tableWidget->setSizePolicy(sizePolicy);
         QFont font1;
         font1.setPointSize(15);
-        font1.setBold(true);
-        font1.setWeight(75);
+        font1.setBold(false);
+        font1.setWeight(50);
         tableWidget->setFont(font1);
         tableWidget->setStyleSheet(QStringLiteral(""));
         tableWidget->setTextElideMode(Qt::ElideMiddle);
