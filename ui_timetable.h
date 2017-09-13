@@ -38,6 +38,7 @@ public:
     QLabel *label_2;
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_2;
+    QLabel *label_3;
     QTableWidget *tableWidget;
     QTableWidget *tableWidget_2;
     QGroupBox *groupBox_2;
@@ -77,6 +78,12 @@ public:
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
         lineEdit_2->setGeometry(QRect(330, 0, 201, 20));
         lineEdit_2->setFont(font);
+        label_3 = new QLabel(groupBox);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(580, 0, 68, 21));
+        QFont font1;
+        font1.setItalic(true);
+        label_3->setFont(font1);
 
         verticalLayout->addWidget(groupBox);
 
@@ -87,11 +94,11 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(tableWidget->sizePolicy().hasHeightForWidth());
         tableWidget->setSizePolicy(sizePolicy);
-        QFont font1;
-        font1.setPointSize(15);
-        font1.setBold(false);
-        font1.setWeight(50);
-        tableWidget->setFont(font1);
+        QFont font2;
+        font2.setPointSize(15);
+        font2.setBold(false);
+        font2.setWeight(50);
+        tableWidget->setFont(font2);
         tableWidget->setStyleSheet(QStringLiteral(""));
         tableWidget->setTextElideMode(Qt::ElideMiddle);
 
@@ -99,7 +106,7 @@ public:
 
         tableWidget_2 = new QTableWidget(centralWidget);
         tableWidget_2->setObjectName(QStringLiteral("tableWidget_2"));
-        tableWidget_2->setFont(font1);
+        tableWidget_2->setFont(font2);
 
         verticalLayout->addWidget(tableWidget_2);
 
@@ -143,6 +150,7 @@ public:
         label_2->setText(QApplication::translate("Timetable", "Room:", 0));
         lineEdit->setText(QApplication::translate("Timetable", "06/09/2017", 0));
         lineEdit_2->setText(QApplication::translate("Timetable", "08-06-02", 0));
+        label_3->setText(QString());
         groupBox_2->setTitle(QString());
         pushButton->setText(QApplication::translate("Timetable", "Back", 0));
         pushButton_2->setText(QApplication::translate("Timetable", "Next", 0));
